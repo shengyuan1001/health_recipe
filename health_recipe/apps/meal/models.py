@@ -10,7 +10,6 @@ class MealModel(models.Model):
     name = models.CharField(max_length=255, verbose_name='每日一餐', default='默认推荐')
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='关联用户')
     recipe = models.ForeignKey(RecipeModel, on_delete=models.CASCADE, verbose_name='关联食谱', default=1)
-    calorie_sum = models.FloatField(default=0, verbose_name='卡路里总数')
     add_time = models.DateTimeField(auto_now=True, verbose_name='创建时间')
 
     class Meta:

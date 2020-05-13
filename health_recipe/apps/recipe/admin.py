@@ -10,12 +10,13 @@ class ContactClassFoodModel(admin.ModelAdmin):
 
 
 class ContactFoodModel(admin.ModelAdmin):
-    list_display = ['name', 'class_name', 'f_calorie', 'show_img']
-    list_filter = ['name', 'f_calorie']
+    list_display = ['name', 'class_name', 'calorie', 'vitamin_a', 'vitamin_c', 'vitamin_e', 'vitamin_b1', 'vitamin_b2',
+                    'protein', 'axunge', 'carbohydrate', 'dietary_fiber', 'show_img']
+    list_filter = ['name', 'calorie']
 
 
 class ContactRecipeModel(admin.ModelAdmin):
-    list_display = ['r_name', 'r_food1', 'r_food2', 'r_food3', 'r_food4', 'r_food5']
+    list_display = ['r_name', ]
     list_filter = ['r_name']
 
 
