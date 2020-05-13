@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+    BobBlog
+{% endblock %}
+{{% block li %}
+    <li><a><font size="4" color="white">{{ user.nickname }}</font></a></li>
+    <li><a href="{% url 'blog:logout' %}"><i class="fa fa-sighout"></i><font size="4">注销</font></a></li>
+{% endblock %}
+{% block p %}
+
+    <p class="lead"><font color="white">Easy-Download,这里有好多好多资源喔，尽情的享用吧(〃'▽'〃)</font></p>
+    <p class="tagline"><font color="white">如果您有优秀的资源，欢迎投递哦</font></p>
+    <p class="tagline"><font color="white">{{ user.username }}{{ token }}</font></p>
+    <p><a class="btn btn-action btn-lg" role="button" href="{% url 'blog:login-success' %}">START NOW</a></p>
+{% endblock %}
+

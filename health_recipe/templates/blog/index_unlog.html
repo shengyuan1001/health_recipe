@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+    BobBlog
+{% endblock %}
+{{% block li %}
+    <p><a class="btn btn-action btn-lg" role="button" href="{% url 'blog:login' %}">登录/注册</a></p>
+{% endblock %}
+{% block p %}
+            <p class="lead"><font color="white">个人博客系统</font></p>
+            <p class="tagline"><font color="white"></font></p>
+{% endblock %}
+
